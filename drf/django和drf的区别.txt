@@ -1,0 +1,10 @@
+前端 vue
+
+后端 drf  django rest framework (drf)
+
+Django和DRF的区别：https://blog.csdn.net/sunnyliric/article/details/123071878
+	Django是基于Python编程语言开发的一套重量级的用于web开发的框架
+	所谓web开发框架，就是基于网络通信原理，为了便于开发，对代码流进行了统一的封装和集成
+	Django是对Python的封装，而DRF又在Django的基础上做了进一步的封装
+	相较于Django, DRF更加适用于前后端分离的开发模式
+	Django自带template模板，最终会生成一个html页面。而DRF通过序列化器和丰富的视图类，向服务器提交json格式的数据。
