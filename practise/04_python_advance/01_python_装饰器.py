@@ -39,14 +39,15 @@ def outer2(func):
     return inner
 
 
-@outer2()
+# 表示使用 outer2 装饰 sleep2
+@outer2
 def sleep2():
     import random
     import time
     print("...睡眠中......")
     time.sleep(random.randint(1, 5))
 
-
+# 直接调用 sleep2 
 sleep2()
 
 
