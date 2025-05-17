@@ -29,7 +29,7 @@ sleep(1)
 
 """
 # 使用 * 导入time模块的全部功能. 相当于"import time", 但是这种方法使用time模块功能时要在前面加上"time."
-from time *
+from time import *
 sleep(1)        # 注意: 这里不用加上"time."
 """
 
