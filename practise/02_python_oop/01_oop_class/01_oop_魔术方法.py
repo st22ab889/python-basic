@@ -32,12 +32,18 @@ class Student:
         return f"Student类对象, name={self.name}, age={self.age}"
 
     def __lt__(self, other):
-        return self.age < other.age         # 也可以写为 elf.age > other.age ,  "__lt__"方法支持 < 和 > 两种符号
+        return self.age < other.age         # 也可以写为 self.age > other.age ,  "__lt__"方法支持 < 和 > 两种符号
+
+    def __gt__(self, other):
+        return self.age > other.age
 
     def __le__(self, other):
-        return self.age >= other.age        # 也可以写为 elf.age <= other.age ,  "__le__"方法支持 <= 和 >= 两种符号
+        return self.age <= other.age        # 也可以写为 self.age <= other.age ,  "__le__"方法支持 <= 和 >= 两种符号
 
-    # 如果" __eq__"没有自定义实现, 默认比较的是两个对象的内存地址
+    def __ge__(self, other):
+        return self.age >= other.age
+
+    # 如果没有实现" __eq__"没有自定义实现, 默认比较的是两个对象的内存地址
     def __eq__(self, other):
         return self.age == other.age        # "__eq__"方法支持 ==
 
@@ -48,7 +54,8 @@ print(str(stu_1))
 
 stu_2 = Student("Lily", 25)
 
+print(stu_1 < stu_2)
 print(stu_1 > stu_2)
+print(stu_1 <= stu_2)
 print(stu_1 >= stu_2)
 print(stu_1 == stu_2)
-
