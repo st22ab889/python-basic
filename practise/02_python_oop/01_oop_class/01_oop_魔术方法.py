@@ -37,7 +37,7 @@ class Student:
     def __le__(self, other):
         return self.age >= other.age        # 也可以写为 elf.age <= other.age ,  "__le__"方法支持 <= 和 >= 两种符号
 
-    # 如果没有实现" __eq__"没有自定义实现, 默认比较的是两个对象的内存地址
+    # 如果" __eq__"没有自定义实现, 默认比较的是两个对象的内存地址
     def __eq__(self, other):
         return self.age == other.age        # "__eq__"方法支持 ==
 
